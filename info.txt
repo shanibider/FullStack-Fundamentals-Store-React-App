@@ -1,0 +1,27 @@
+1. Components:
+Functional Components: In React, components are the building blocks of the user interface. They can be either class-based or functional. In my code, i'm mainly using functional components, which are defined using arrow functions.
+
+2. State and Hooks:
+useState Hook: React provides the useState hook to manage state in functional components. State is used to store and manage data that may change during the lifetime of a component.
+
+3. Props:
+Props (Properties): Props are used to pass data from a parent component to a child component. In my code, i'm passing functions like onAddExpense and onSaveExpenseData as props to child components. This allows child components to communicate with and modify the state of their parent components.
+
+4. Functions:
+Event Handlers: Functions like titleChangeHandler, AmountChangeHandler, DateChangeHandler, and submitHandler are event handlers. They respond to user interactions like typing into input fields or submitting a form.
+
+5. Communication between Components:
+Components can communicate with each other through props. For example, the NewExpense component receives the onAddExpense prop, which is a function from its parent (App) component. This function is then called when a new expense is submitted in the ExpenseForm component.
+
+6. Forms in React:
+Forms in React are similar to HTML forms but often involve handling form submission and managing form data using state. The submitHandler function in ExpenseForm is an example of handling form submission.
+
+7. State Management:
+State is managed using the useState hook. When state changes, React re-renders the component to reflect the updated state.
+
+8. React Lifecycle:
+Components in React go through a lifecycle. Functional components don't have lifecycle methods like class components, but they have equivalent effects achieved through hooks like useEffect.
+
+9. Code Organization:
+React applications are typically organized into components, each responsible for a specific part of the UI or functionality. This modular structure makes it easier to manage and understand the code.
+

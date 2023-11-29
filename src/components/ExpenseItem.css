@@ -31,11 +31,29 @@
     font-size: 1rem;
     font-weight: bold;
     color: white;
-    background-color: #40005d;
+    background-color: #F6839C;
     border: 1px solid white;
     padding: 0.5rem;
     border-radius: 12px;
 }
+
+button {
+    margin-bottom: 15px;
+    margin-top: 3px;
+    border-radius: 12px;
+    padding: 10px 20px;
+    background-color: #F0B5B3;
+    border-color: #F0B5B3;
+    color: #ffffff;
+    font-size: 16px;
+    font-weight: bold;
+    transition: background-color 0.3s ease; /* Smooth transition */
+}
+
+button:hover {
+    background-color: #D08D8A; /* Adjust the color on hover */
+}
+
 
 @media (min-width: 580px) {
     .expense-item__description {
