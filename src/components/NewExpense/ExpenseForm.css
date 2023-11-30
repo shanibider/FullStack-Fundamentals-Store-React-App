@@ -1,7 +1,7 @@
 /* Styles for the form container */
 .new-expense {
     max-width: auto;
-    margin: 10 auto;
+    margin: 10px auto;
     padding: 20px;
     border: 1px solid #ccc;
     border-radius: 8px;
@@ -31,6 +31,7 @@ input {
     padding: 8px;
     border: 1px solid #ccc;
     border-radius: 4px;
+    margin:10px
 }
 
 /* Styles for the "Add expense" button */
@@ -46,8 +47,26 @@ button {
     border-radius: 4px;
     cursor: pointer;
     transition: background-color 0.3s;
+    margin:10px
 }
 
 button:hover {
-    background-color: #45a049;
+    background-color: #F5CFCE;
 }
+
+/* Styles for the price button */
+.expense-item__price {
+    width: 70px;
+    font-size: 1rem;
+    font-weight: bold;
+    color: white;
+    background-color: #F6839C;
+    border: 1px solid white;
+    padding: 10px;
+    border-radius: 12px;
+    text-align: center; /* Center text horizontally */
+    line-height: 40px; /* Center text vertically */
+    margin: 10px;
+}
+
+

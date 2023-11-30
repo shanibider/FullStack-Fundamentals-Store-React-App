@@ -1,5 +1,5 @@
 import ExpenseItem from "./ExpenseItem";
-//import 'Expenses.css';
+import './Expenses.css';
 import Card from "../UI/Card";
 
 // 'Expenses component'- responsible for rendering a list of expense items.

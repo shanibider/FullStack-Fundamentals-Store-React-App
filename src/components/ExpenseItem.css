@@ -39,6 +39,7 @@
     border: 1px solid white;
     padding: 0.5rem;
     border-radius: 12px;
+    
 }
 
 button {
@@ -57,6 +58,13 @@ button {
 button:hover {
     background-color: #D08D8A; /* Adjust the color on hover */
 }
+
+.expense-item__input{
+    padding: 15px;
+}
+
+
+
 
 
 @media (min-width: 580px) {

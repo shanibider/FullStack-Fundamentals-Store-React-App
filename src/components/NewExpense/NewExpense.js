@@ -2,7 +2,6 @@ import React from "react";
 import './NewExpense.css'
 import ExpenseForm from "./ExpenseForm";
 
-
 // Defines the NewExpense functional component. 
 // This component renders the ExpenseForm component, and handles the data entered by the user.
 const NewExpense = (props) => {

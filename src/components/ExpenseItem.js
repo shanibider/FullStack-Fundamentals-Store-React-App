@@ -11,14 +11,24 @@ function ExpenseItem(props) {
 
     // declare a state variable- title, and a function- setTitle to update the title.
     // The initial state is set to the value of props. Title passed to the component.
-    const [title , setTitle] = useState(props.title)
+    const [title , setTitle] = useState(props.title);
+    // State variable - editedTitle, and a function - setEditedTitle to update the editedTitle.
+    const [editedTitle, setEditedTitle] = useState('');
+
    
 // function that logs a message to the console when the button is clicked and updates the title state to 'Update!'.
 const clickHandler= () => {
     console.log('clicked!');
-    setTitle('Item is update!');
+    setTitle(editedTitle || 'Item is update!');
+    setEditedTitle('');
 };
 
+// Event handler for changes in the input field for editing the title.
+const inputChangeHandler = (event) => {
+    setEditedTitle(event.target.value);
+};
+
+// Returns the JSX code for the component.
 // Renders a Card component with the class 'expense-item', which provides styling for the expense item.
 // Renders an 'ExpenseDate component', passing the date prop.    
 // Renders a div element displaying the expense item's title using the 'title state'.
@@ -28,8 +38,17 @@ return (
         <Card className='expense-item'>
             <ExpenseDate date={props.date} />
             <div className="expense-item__description "> {title} </div>
-            <div className="expense-item__price"> {props.amount} </div>
+            <div className="expense-item__price"> {props.amount}₪ </div>
+            <div className="expense-item__input-container">
+                <input
+                    className="expense-item__input"
+                    type="text"
+                    value={editedTitle}
+                    onChange={inputChangeHandler}
+                    placeholder="Enter new title"
+                />
             <button onClick={clickHandler}> Change title </button>
+            </div>
         </Card>
     );
 }

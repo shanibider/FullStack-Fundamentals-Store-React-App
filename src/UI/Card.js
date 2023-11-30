@@ -8,7 +8,7 @@ function Card(props) {
     // Linking the default class 'card' with any additional classes passed through props
     // creates a variable named classes by concatenating the string 'card' with any additional classes passed through the props object.
     //This is a common pattern to allow users of your component to customize its styling by providing additional class names.    
-    const classes = 'card' + props.className;
+    const classes = 'card ' + props.className;
 
     //return defines what my component renders.
    // returns a div element with the class determined by the classes variable and renders any child components.
