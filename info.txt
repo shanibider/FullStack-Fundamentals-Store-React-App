@@ -25,3 +25,90 @@ Components in React go through a lifecycle. Functional components don't have lif
 9. Code Organization:
 React applications are typically organized into components, each responsible for a specific part of the UI or functionality. This modular structure makes it easier to manage and understand the code.
 
+
+
+
+
+Syntax:
+
+Passing function (propValue) as a prop (propName) to the child component:
+// <ComponentName propName = {propValue} > </ComponentName>
+
+
+
+
+
+Structure of passing and rendering props between components:
+
+// NewExpense component
+const NewExpense = () => {
+    // *saveExpenseDataHandler function* will be passed as a prop to the ExpenseForm component.
+    const saveExpenseDataHandler = (enteredExpenseData) => {
+
+        // Handle the expense data received from the child component.
+        console.log('NewExpense received data:', enteredExpenseData);
+     };
+
+    // Render the NewExpense component with the ExpenseForm as a child.
+    return (
+        <div className="new-expense">
+            {/* Pass the *saveExpenseDataHandler function* as a prop to the ExpenseForm component. */}
+            <ExpenseForm onSaveExpenseData={saveExpenseDataHandler}></ExpenseForm>
+        </div>
+    );
+};
+
+
+
+ 
+
+
+
+
+communication between components:
+achieved through the use of props. Props allow you to pass data from a parent component to a child component. 
+
+In this example, a parent component `NewExpense` and a child component `ExpenseForm`, communicate between them using props.
+
+// 1. NewExpense component
+const NewExpense = () => {
+
+    // *saveExpenseDataHandler* function will be passed as a prop to the ExpenseForm component.
+    const saveExpenseDataHandler = (enteredExpenseData) => {
+        console.log('NewExpense received data:', enteredExpenseData);   // Handle the expense data received from the child component.
+    };
+
+    // Render the NewExpense component with the ExpenseForm as a child.
+    return (
+            {/* Pass the *saveExpenseDataHandler function* as a prop to the ExpenseForm component. */}
+            <ExpenseForm onSaveExpenseData= {saveExpenseDataHandler} > </ExpenseForm>
+    );
+};
+
+In the `NewExpense` component:
+- `saveExpenseDataHandler` is a function that will handle the expense data received from the `ExpenseForm` component. This function will be passed down as a prop to `ExpenseForm`.
+- `<ExpenseForm onSaveExpenseData={saveExpenseDataHandler}></ExpenseForm>` includes the `ExpenseForm` component as a child and passes the `saveExpenseDataHandler` function to it as a prop named `onSaveExpenseData`.
+
+
+
+// 2. ExpenseForm component
+const ExpenseForm = (props) => {
+
+    // Event handler for form submission.
+    const submitHandler = (event) => {
+        const expenseData = {           // Collect data from the form.
+            title: enteredTitle,
+            amount: enteredAmount,
+            date: new Date(enteredDate)
+        };
+
+        // Call the onSaveExpenseData prop function passed from the parent component (NewExpense).
+        props.onSaveExpenseData (expenseData);
+    };
+
+};
+In the `ExpenseForm` component:
+- `props` receives the `onSaveExpenseData` prop from the parent component (`NewExpense`).
+- `submitHandler` is an event handler that is called when the form is submitted. It collects the data from the form and calls `props.onSaveExpenseData(expenseData)`,
+passing the data back to the parent component.
+

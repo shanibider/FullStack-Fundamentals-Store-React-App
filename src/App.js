@@ -13,11 +13,11 @@ import Expenses from "./components/Expenses";
     {
       id : 'e1',
       title: 'Toilet Paper',
-      amount: 94,
+      amount: 70,
       date: new Date(2023, 11, 20),
     },
     { id : 'e2' , title: 'New TV', amount: 799.49, date: new Date(2023, 2, 21) },
-    { id: 'e3' , title: 'Car ipad', amount: 2999, date: new Date(2023, 2, 28) },
+    { id: 'e3' , title: 'Ipad', amount: 2999, date: new Date(2023, 2, 28) },
     { id: 'e4' , title: 'New Desk', amount: 450, date: new Date(2023, 5, 12) },
   ];
 
@@ -28,6 +28,7 @@ import Expenses from "./components/Expenses";
     const [expenses , setExpense ] = useState (DUMMY_EXPENSE);    
 
     // a function that takes an expense parameter, and responsible for updating the expenses state by adding a new expense.
+    // will be passed as a prop to the 'NewExpense component'.
   const addExpenseHandler = (expense) => { 
     console.log ('im in APP.js');
     console.log (expense);

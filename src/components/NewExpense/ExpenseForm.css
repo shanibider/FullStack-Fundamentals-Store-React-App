@@ -1,26 +1,53 @@
+/* Styles for the form container */
+.new-expense {
+    max-width: auto;
+    margin: 10 auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Styles for the form controls */
 .new-expense__controls {
     display: flex;
-    flex-wrap: wrap;
-    gap: 1rem;
-    margin-bottom: 1rem;
-    text-align: left;
+    flex-direction: column;
+    gap: 15px;
 }
 
-.new-expense__control label {
+.new-expense__control {
+    display: flex;
+    flex-direction: column;
+}
+
+/* Styles for the labels */
+label {
     font-weight: bold;
-    margin-bottom: 0.5rem;
-    display: block;
+    margin-bottom: 5px;
 }
 
-.new-expense__control input {
-    font: inherit;
-    padding: 0.5rem;
-    border-radius: 6px;
+/* Styles for the input fields */
+input {
+    padding: 8px;
     border: 1px solid #ccc;
-    width: 20rem;
-    max-width: 100%;
+    border-radius: 4px;
 }
 
+/* Styles for the "Add expense" button */
 .new-expense__actions {
-    text-align: right;
+    margin-top: 15px;
+}
+
+button {
+    padding: 10px;
+    background-color: #f0b5b3;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #45a049;
 }

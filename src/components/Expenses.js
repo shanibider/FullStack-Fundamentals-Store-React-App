@@ -2,7 +2,7 @@ import ExpenseItem from "./ExpenseItem";
 //import 'Expenses.css';
 import Card from "../UI/Card";
 
-// Expenses component is responsible for rendering a list of expense items.
+// 'Expenses component'- responsible for rendering a list of expense items.
 // It utilizes the Card component for styling and iterates over an array of expense items, rendering an ExpenseItem component for each item in the list.
 // The individual expense items are passed as props to the ExpenseItem component, making it a flexible and reusable piece of the UI.
 
